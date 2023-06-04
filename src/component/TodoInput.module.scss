@@ -1,0 +1,16 @@
+.todoInput {
+  box-shadow: inset -3px -2px 3px 1px rgb(235, 229, 229);
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: grey;
+  &::placeholder {
+    opacity: 0.5;
+  }
+  &:focus {
+    border-radius: 3px;
+    border: 0;
+    outline: 3px solid rgb(190, 187, 187);
+    box-shadow: 5px 3px 10px 1px rgb(190, 187, 187);
+  }
+}

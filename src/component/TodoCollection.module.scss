@@ -1,0 +1,27 @@
+.todoContainer {
+  height: 95%;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(219, 211, 211, 0.623);
+    box-shadow: inset 0 0 6px rgba(179, 187, 235, 0.356);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(219, 211, 211, 0.356);
+  }
+}
+
+.todoCollectionContainer {
+  border-top: 1px solid rgb(233, 220, 220);
+  height: 300px;
+  width: 300px;
+  padding: 30px;
+  margin: 10px auto;
+}

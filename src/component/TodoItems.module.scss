@@ -1,0 +1,80 @@
+.todoItemContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.itemBody {
+  user-select: none;
+  display: none;
+  margin-right: 5px;
+  padding: 5px 10px;
+  width: 120px;
+  overflow: hidden;
+  box-shadow: inset -3px -2px 3px 1px rgb(235, 229, 229);
+  border: 0;
+  border-radius: 5px;
+  color: gray;
+  &::placeholder {
+    color: var(--gray);
+    font-size: 13px;
+  }
+  &:focus {
+    border-radius: 3px;
+    border: 0;
+    outline: 3px solid rgb(190, 187, 187);
+    box-shadow: 5px 3px 10px 1px rgb(190, 187, 187);
+  }
+}
+
+.itemText {
+  display: inline-block;
+  color: gray;
+  margin-right: 5px;
+  user-select: none;
+  cursor: pointer;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: start;
+  &:hover {
+    color: rgb(163, 152, 152);
+    font-weight: 500;
+  }
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.edit {
+  .itemText {
+    display: none;
+  }
+  .itemBody {
+    display: inline-block;
+  }
+  .itemAction {
+    display: none;
+  }
+}
+
+.todoItemBtn {
+  border: 0;
+  border-radius: 3px;
+  margin-left: 10px;
+  padding: 5px 8px;
+  cursor: pointer;
+  color: rgb(107, 98, 87);
+  &:hover {
+    background-color: rgb(80, 73, 73);
+    color: antiquewhite;
+  }
+  &:focus {
+    border-radius: 3px;
+    border: 0;
+    outline: 2px solid rgb(190, 187, 187);
+  }
+}
