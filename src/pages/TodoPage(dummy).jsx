@@ -2,6 +2,7 @@ import TodoInput from 'component/TodoInput'
 import TodoCollection from 'component/TodoCollection'
 import Footer from 'component/Footer'
 import { useState } from 'react'
+import style from './TodoPage.module.scss'
 
 // ------------------------------------------
 const dummyTodos = [
@@ -31,13 +32,14 @@ const dummyTodos = [
     id: 5
   },
   {
-    title: '練習06',
+    title: '練習99999999999999999999999999999999999999',
     isDone: false,
     id: 6
   }
 ]
 // ------------------------------------------
 const TodoPage = () => {
+  const { todoPage } = style
   const [inputValue, setInputValue] = useState('')
   const [todos, setTodos] = useState(dummyTodos)
 
@@ -110,7 +112,7 @@ const TodoPage = () => {
   }
 
   return (
-    <div className="todoPage">
+    <div className={todoPage}>
       <TodoInput
         inputValue={inputValue}
         onChange={handleChange}

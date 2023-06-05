@@ -4,7 +4,7 @@ import { useRef } from 'react'
 
 const TodoItem = ({ todo, onToggleDone, onSave, onDelete, onChangeMode }) => {
   const inputRef = useRef(null)
-  const { todoItemContainer, itemText, itemBody, todoItemBtn, done, edit } = todoItemStyle
+  const { todoItemContainer, itemLabel, itemText, itemBody, todoItemBtn, done, edit } = todoItemStyle
 
   const handleKeyDown = (e) => {
     if (inputRef.current.value.length > 0 && e.key === 'Enter') {
@@ -18,7 +18,7 @@ const TodoItem = ({ todo, onToggleDone, onSave, onDelete, onChangeMode }) => {
   return (
     <div className={todoItemContainer}>
       <label
-        className={clsx('', { [edit]: todo.isEdit })}
+        className={clsx(itemLabel, { [edit]: todo.isEdit })}
         onDoubleClick={() => onChangeMode?.({ id: todo.id, isEdit: true })}
       >
         <span className={clsx(itemText, { [done]: todo.isDone })}>{todo.title}</span>
