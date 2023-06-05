@@ -6,6 +6,7 @@
   color: grey;
   &::placeholder {
     opacity: 0.5;
+    color: blue;
   }
   &:focus {
     border-radius: 3px;
