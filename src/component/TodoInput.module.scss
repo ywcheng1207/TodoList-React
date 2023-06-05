@@ -1,16 +1,22 @@
-.todoInput {
-  box-shadow: inset -3px -2px 3px 1px rgb(235, 229, 229);
-  border: 0;
-  border-radius: 5px;
-  padding: 10px 20px;
-  color: grey;
-  &::placeholder {
-    opacity: 0.5;
-  }
-  &:focus {
-    border-radius: 3px;
+.todoInputContainer {
+  .todoInput {
+    box-shadow: inset -3px -2px 3px 1px rgb(235, 229, 229);
     border: 0;
-    outline: 3px solid rgb(190, 187, 187);
-    box-shadow: 5px 3px 10px 1px rgb(190, 187, 187);
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: grey;
+    width: 40%;
+    &::placeholder {
+      opacity: 0.5;
+    }
+    &:hover {
+      border-radius: 3px;
+      outline: 3px solid rgb(223, 216, 216);
+    }
+    &:focus {
+      border-radius: 3px;
+      outline: 3px solid rgb(190, 187, 187);
+      box-shadow: 3px 3px 10px 1px rgb(190, 187, 187);
+    }
   }
 }

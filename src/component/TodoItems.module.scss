@@ -3,27 +3,33 @@
   justify-content: center;
   align-items: center;
   margin-top: 5px;
+  width: 95%;
 }
 
+.itemLabel {
+  margin-right: 5px;
+  flex: 1;
+  // border: 0.5px solid gray;
+  // border-radius: 5px;
+}
 .itemBody {
   user-select: none;
   display: none;
-  margin-right: 5px;
   padding: 5px 10px;
-  width: 120px;
+  width: 95%;
   overflow: hidden;
   box-shadow: inset -3px -2px 3px 1px rgb(235, 229, 229);
-  border: 0;
+  border: 0px;
   border-radius: 5px;
   color: gray;
+  // margin: 0 auto;
   &::placeholder {
     color: var(--gray);
     font-size: 13px;
   }
   &:focus {
     border-radius: 3px;
-    border: 0;
-    outline: 3px solid rgb(190, 187, 187);
+    outline: 2px solid rgb(190, 187, 187);
     box-shadow: 5px 3px 10px 1px rgb(190, 187, 187);
   }
 }
@@ -34,7 +40,7 @@
   margin-right: 5px;
   user-select: none;
   cursor: pointer;
-  width: 100px;
+  width: 400px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -64,12 +70,15 @@
 }
 
 .todoItemBtn {
-  border: 0;
+  border: 1px solid rgb(202, 200, 200);
+  // border: 0;
+  // box-shadow: inset 0px 0px 2px 1px rgb(80, 73, 73);
   border-radius: 3px;
   margin-left: 10px;
   padding: 5px 8px;
   cursor: pointer;
   color: rgb(107, 98, 87);
+  flex: 0.3;
   &:hover {
     background-color: rgb(80, 73, 73);
     color: antiquewhite;
